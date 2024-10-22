@@ -9,5 +9,5 @@ class EmailBanned(BaseCommannd):
     def execute(self):
         record = get_blacklist_by_email(self.email)
         if record is None:
-            return {"email_found": False, "reason": ""}
-        return {"email_found": True, "reason": record.reason}
+            return {"email_found": False, "reason": "", "updated_at": "22/10/2024" }
+        return {"email_found": True, "reason": record.reason,  "updated_at": "22/10/2024"}
